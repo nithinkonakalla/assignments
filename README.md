@@ -31,6 +31,41 @@ websocket-service/
 
 ## Local Setup
 
+### Quick Start in VS Code (Recommended)
+1. Open VS Code.
+2. Go to **File → Open Folder...** and select the `charttrader` project root.
+3. Open a terminal in VS Code (**Terminal → New Terminal**).
+4. Create three terminals so you can run backend, websocket-service, and frontend side-by-side.
+
+Use these commands in each terminal:
+
+**Terminal 1 (backend):**
+```bash
+cd backend
+npm install
+cp .env.example .env
+npm run dev
+```
+
+**Terminal 2 (websocket-service):**
+```bash
+cd websocket-service
+npm install
+npm run dev
+```
+
+**Terminal 3 (frontend):**
+```bash
+cd frontend
+npm install
+cp .env.example .env
+npm run dev
+```
+
+Then open `http://localhost:5173` in your browser.
+
+> Note: Make sure PostgreSQL is running first, and `database/schema.sql` has been applied.
+
 ### 1) Database
 ```bash
 createdb charttrader
